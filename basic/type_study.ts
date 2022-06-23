@@ -105,4 +105,4 @@ function getText(name:string, age:number, language?:string): string {
     const ageText = age >= 35 ? 'senior':'junior';
     return `name: ${nameText}, age: ${ageText}`;
 }
-console.log(getText("heedo",25));
+console.log(getText("heedo",25,'korea'));
