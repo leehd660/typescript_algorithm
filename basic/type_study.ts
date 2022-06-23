@@ -95,3 +95,14 @@ console.log(Fruit[5]);
 //그냥 enum을 사용하면 컴파일 후에 enum객체가 남아 있음 -> 이런 경우 번들 파일이 불필요하게 커질 수 있음.
 //그렇기 때문에 enum객체에 접근하지 않는다면, const enum을 이용해서 컴파일 결과에 enum의 객체를 남기지 않을 수 있다. 사용한 값만 노출됨.
 
+//함수의 타입
+//매개변수 옆에 ?를 쓰면 선택매개변수(optional parameter)가 됨. 있어도 되고 없어도 된다는 의미 ->undefined가 되기도 함
+//optional parameter는 맨 뒤에 적어라
+//매개변수의 개수가 많은 경우 -> named parameter(뒤에서 설명)
+// function getText(name:string, age:number, language?:string, ...rest:number[]): string {
+function getText(name:string, age:number, language?:string): string {
+    const nameText = name.substring(0,10);
+    const ageText = age >= 35 ? 'senior':'junior';
+    return `name: ${nameText}, age: ${ageText}`;
+}
+console.log(getText("heedo",25));
